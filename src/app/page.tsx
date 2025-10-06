@@ -1,5 +1,7 @@
 export default function Home() {
 	return (
-		<div></div>
+	   <main className = "min-h-screen bg-gray-950 text-white p-8">
+	   
+	   </main> 
 	);
 }
