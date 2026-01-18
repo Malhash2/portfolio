@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { CodeBlock } from "@/components/ui/code-block";
+import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 
 export default function Home() {
+
+
     const code = `const coder = {
   name: 'Mohammed Al-Hashimi',
   education: 'B.Eng. Software Engineering @ Western University',
@@ -30,6 +33,9 @@ export default function Home() {
 
             <section>
                 <h1 className="text-2xl font-bold mb-6 pt-8">About Me</h1>
+                <div className="flex md:h-60 items-center justify-center">
+                    <TextHoverEffect text="ENGINEER" />
+                </div>
                 <CodeBlock
                     language="jsx"
                     filename="About.jsx"
