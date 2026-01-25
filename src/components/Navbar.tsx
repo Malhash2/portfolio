@@ -49,6 +49,7 @@ export default function Navbar() {
                 <h1 className="text-xl font-bold text-green-400">Mohammed Al-Hashimi</h1>
                 <ul className="flex space-x-6 text-sm font-semibold">
                     <li><Link href={"/"}>Home</Link></li>
+                    <li><Link href={"/About"}>About</Link></li>
                     <li><Link href={"/Projects"}>Projects</Link></li>
                     <li><Link href={"/Experience"}>Experience</Link></li>
                     <li><Link href={"/Contact"}>Contact</Link></li>
