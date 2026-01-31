@@ -172,6 +172,25 @@ const finishedProjects = [
             </>
         ),
     },
+    {
+        title: "Developer Portfolio",
+        badge: "Web Design",
+        tags: ["Next.js", "Tailwind CSS", "Framer Motion", "React"],
+        image: "/Portfolio.png", // <--- Don't forget to add a screenshot to your public folder!
+        link: "https://github.com/Malhash2/Portfolio", // <--- Update this if your repo name is different
+        description: (
+            <>
+                <p>
+                    A modern, high-performance personal portfolio built with <strong>Next.js</strong> and <strong>Tailwind CSS</strong>.
+                    Designed with a focus on dark-mode aesthetics, responsive layout, and fluid user interactions.
+                </p>
+                <p>
+                    Leverages <strong>Framer Motion</strong> for smooth entrance animations and integrates advanced UI components
+                    like dynamic particle effects and tracing beams to create an immersive browsing experience.
+                </p>
+            </>
+        ),
+    },
 ];
 
 // --- DATA SECTION 2: CURRENTLY WORKING ON ---
@@ -193,6 +212,27 @@ const currentProjects = [
                     Currently focused on implementing core editor primitives including cursor movement,
                     buffer management, and incremental rendering, with an emphasis on performance,
                     simplicity, and understanding how editors work beneath modern abstractions.
+                </p>
+            </>
+        ),
+    },
+    {
+        title: "Arch Linux Workflow",
+        badge: "Systems / Config",
+        tags: ["Arch Linux", "Hyprland", "Lua", "Bash"],
+        image: "/Rice.png", // Take a screenshot of your desktop!
+        link: "https://github.com/Malhash2/dotfiles", // Standard name for this repo
+        description: (
+            <>
+                <p>
+                    A fully customized <strong>Wayland-based</strong> development environment optimized for
+                    keyboard-centric workflow and efficiency. Built on <strong>Arch Linux</strong> using the
+                    Hyprland compositor.
+                </p>
+                <p>
+                    Features include a custom-scripted status bar (Waybar), automated window management rules,
+                    and a personalized <strong>Neovim (Lua)</strong> configuration serving as a full IDE replacement
+                    for C and Web Development.
                 </p>
             </>
         ),
