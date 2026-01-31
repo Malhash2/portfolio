@@ -50,7 +50,7 @@ const experienceData = [
         title: "Software Engineering Student @ Western Univ.",
         description:
             "Currently in 4th year, focusing on full-stack development and system optimization. Dean's List student with a passion for scalable architecture.",
-        link: "https://www.uwo.ca",
+        link: "#",
     },
     {
         title: "Programming Tutor",

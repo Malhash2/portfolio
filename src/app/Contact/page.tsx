@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { EncryptedText } from "@/components/ui/encrypted-text";
-import { warn } from "console";
 
 const GithubIcon = () => (
     <Image
@@ -106,7 +105,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h3 className="font-medium text-gray-200 group-hover:text-white">LinkedIn</h3>
-                                <p className="text-sm text-gray-500">Let's connect professionally</p>
+                                <p className="text-sm text-gray-500">Lets&apos; connect professionally</p>
                             </div>
                         </Link>
                     </div>

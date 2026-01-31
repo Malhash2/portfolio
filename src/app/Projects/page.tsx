@@ -6,6 +6,14 @@ import Link from "next/link";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { twMerge } from "tailwind-merge";
 
+interface Project {
+    title: string;
+    badge: string;
+    tags: string[];
+    image?: string; // The '?' means it's optional
+    link?: string;  // Optional
+    description: React.ReactNode; // Allows JSX elements inside
+}
 export default function Projects() {
     return (
         <main className="min-h-screen bg-gray-950 text-white py-20">
@@ -53,7 +61,7 @@ export default function Projects() {
 }
 
 // --- HELPER COMPONENT (Reusable Card) ---
-function ProjectCard({ item }) {
+function ProjectCard({ item }: { item: Project }) {
     return (
         <div className="mb-16">
             {/* Badge */}
