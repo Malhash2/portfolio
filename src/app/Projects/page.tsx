@@ -64,9 +64,15 @@ export default function Projects() {
 
                                 {/* Extra Idea: Links */}
                                 <div className="flex gap-4">
-                                    <Link href="#" className="text-sm font-semibold text-green-400 hover:text-green-300 transition-colors">
-                                        View Source -&gt;
-                                    </Link>
+                                    {item.link && (
+                                        <Link
+                                            href={item.link}
+                                            target="_blank"
+                                            className="text-sm font-semibold text-green-400 hover:text-green-300 transition-colors"
+                                        >
+                                            View Source -&gt;
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -84,6 +90,7 @@ const projectData = [
         badge: "Full Stack",
         tags: ["React", "Firebase", "Firestore", "Tailwind"],
         image: "/Explore-Beyond.png",
+        link: "https://github.com/Malhash2/ExploreBeyond",
         description: (
             <>
                 <p>
@@ -101,8 +108,9 @@ const projectData = [
     {
         title: "Echo Chart",
         badge: "Backend Engineering",
-        tags: ["Java", "SQL", "Spring Boot", "REST API"],
+        tags: ["Java", "SQL", "REST API"],
         image: "/Echo-Chart.png",
+        link: "https://github.com/Malhash2/Echo-Chart",
         description: (
             <>
                 <p>
@@ -122,6 +130,7 @@ const projectData = [
         badge: "Game Dev",
         tags: ["C#", "Unity 3D", "Physics Engine"],
         image: "/Zarvonia.png",
+        link: "https://github.com/Malhash2/Zarvonia",
         description: (
             <>
                 <p>
