@@ -6,8 +6,6 @@ import Link from "next/link";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { twMerge } from "tailwind-merge";
 
-// Optional: If you don't use calsans, you can remove this and the className usage below
-
 export default function Projects() {
     return (
         <main className="min-h-screen bg-gray-950 text-white py-20">
@@ -22,69 +20,99 @@ export default function Projects() {
 
             <TracingBeam className="px-6">
                 <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-                    {projectData.map((item, index) => (
-                        <div key={`content-${index}`} className="mb-16">
 
-                            {/* Primary Category Badge */}
-                            <h2 className="bg-green-500/20 text-green-400 border border-green-500/30 rounded-full text-xs font-mono w-fit px-3 py-1 mb-4">
-                                {item.badge}
-                            </h2>
-
-                            {/* Title */}
-                            <p className={twMerge("text-2xl font-bold mb-4 text-gray-100")}>
-                                {item.title}
-                            </p>
-
-                            <div className="text-sm prose prose-sm dark:prose-invert">
-                                {/* Project Image */}
-                                {item?.image && (
-                                    <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden border border-gray-800">
-                                        <Image
-                                            src={item.image}
-                                            alt={item.title}
-                                            fill
-                                            className="object-cover transition-transform duration-500 hover:scale-105"
-                                        />
-                                    </div>
-                                )}
-
-                                {/* Description */}
-                                <div className="text-gray-300 leading-relaxed mb-6">
-                                    {item.description}
-                                </div>
-
-                                {/* Extra Idea: Tech Stack List */}
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {item.tags?.map((tag, i) => (
-                                        <span key={i} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                {/* Extra Idea: Links */}
-                                <div className="flex gap-4">
-                                    {item.link && (
-                                        <Link
-                                            href={item.link}
-                                            target="_blank"
-                                            className="text-sm font-semibold text-green-400 hover:text-green-300 transition-colors"
-                                        >
-                                            View Source -&gt;
-                                        </Link>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
+                    {/* --- SECTION 1: FINISHED PROJECTS --- */}
+                    {finishedProjects.map((item, index) => (
+                        <ProjectCard key={`finished-${index}`} item={item} />
                     ))}
+
+
+                    {/* --- DIVIDER: CURRENTLY WORKING ON --- */}
+                    <div className="mt-24 mb-16 border-t border-gray-800/60 pt-10">
+                        <div className="flex items-center gap-4 mb-2">
+                            <h2 className="text-2xl font-bold text-white">
+                                Currently <span className="text-blue-400">Working On</span>
+                            </h2>
+                            <div className="h-px bg-blue-500/30 flex-1" />
+                        </div>
+                        <p className="text-gray-500 text-sm">
+                            Exploring low-level systems and experimental architectures.
+                        </p>
+                    </div>
+
+
+                    {/* --- SECTION 2: CURRENT PROJECTS (Libra) --- */}
+                    {currentProjects.map((item, index) => (
+                        <ProjectCard key={`current-${index}`} item={item} />
+                    ))}
+
                 </div>
             </TracingBeam>
         </main>
     );
 }
 
-// TEMPLATE DATA
-const projectData = [
+// --- HELPER COMPONENT (Reusable Card) ---
+function ProjectCard({ item }) {
+    return (
+        <div className="mb-16">
+            {/* Badge */}
+            <h2 className="bg-green-500/20 text-green-400 border border-green-500/30 rounded-full text-xs font-mono w-fit px-3 py-1 mb-4">
+                {item.badge}
+            </h2>
+
+            {/* Title */}
+            <p className={twMerge("text-2xl font-bold mb-4 text-gray-100")}>
+                {item.title}
+            </p>
+
+            <div className="text-sm prose prose-sm dark:prose-invert">
+                {/* Project Image */}
+                {item?.image && (
+                    <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden border border-gray-800">
+                        <Image
+                            src={item.image}
+                            alt={item.title}
+                            fill
+                            className="object-cover transition-transform duration-500 hover:scale-105"
+                        />
+                    </div>
+                )}
+
+                {/* Description */}
+                <div className="text-gray-300 leading-relaxed mb-6">
+                    {item.description}
+                </div>
+
+                {/* Tech Stack List */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                    {item.tags?.map((tag, i) => (
+                        <span key={i} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+
+                {/* Links */}
+                <div className="flex gap-4">
+                    {item.link && (
+                        <Link
+                            href={item.link}
+                            target="_blank"
+                            className="text-sm font-semibold text-green-400 hover:text-green-300 transition-colors"
+                        >
+                            View Source -&gt;
+                        </Link>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+
+// --- DATA SECTION 1: COMPLETED ---
+const finishedProjects = [
     {
         title: "Explore Beyond",
         badge: "Full Stack",
@@ -144,23 +172,29 @@ const projectData = [
             </>
         ),
     },
-    // {
-    //     title: "Project Title Placeholder",
-    //     badge: "Category",
-    //     tags: ["Tech A", "Tech B", "Tech C"],
-    //     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000",
-    //     description: (
-    //         <>
-    //             <p>
-    //                 This is a template for future projects. Describe the problem you solved here.
-    //                 Mention the specific challenges you faced and how your technical choices
-    //                 overcame them.
-    //             </p>
-    //             <p>
-    //                 Highlight the impact of the project (e.g., "Reduced load times by 40%" or
-    //                 "Used by 500+ students").
-    //             </p>
-    //         </>
-    //     ),
-    // },
+];
+
+// --- DATA SECTION 2: CURRENTLY WORKING ON ---
+const currentProjects = [
+    {
+        title: "Libra",
+        badge: "Low-Level Programming", // Or "In Active Development"
+        tags: ["TUI", "C", "Systems"],
+        image: "/Libra.png",
+        link: "https://github.com/Malhash2/Libra",
+        description: (
+            <>
+                <p>
+                    A terminal-based text editor written in <strong>C</strong>, built from the ground up to explore
+                    low-level systems programming concepts such as raw terminal I/O, memory management, and
+                    efficient text manipulation.
+                </p>
+                <p>
+                    Currently focused on implementing core editor primitives including cursor movement,
+                    buffer management, and incremental rendering, with an emphasis on performance,
+                    simplicity, and understanding how editors work beneath modern abstractions.
+                </p>
+            </>
+        ),
+    },
 ];
