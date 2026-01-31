@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-// Make sure this path matches where you put the TracingBeam component
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { twMerge } from "tailwind-merge";
 
@@ -40,12 +39,12 @@ export default function Projects() {
                                 {/* Project Image */}
                                 {item?.image && (
                                     <div className="relative w-full h-64 mb-6 rounded-lg overflow-hidden border border-gray-800">
-                                        {/* <Image */}
-                                        {/*     src={item.image} */}
-                                        {/*     alt={item.title} */}
-                                        {/*     fill */}
-                                        {/*     className="object-cover transition-transform duration-500 hover:scale-105" */}
-                                        {/* /> */}
+                                        <Image
+                                            src={item.image}
+                                            alt={item.title}
+                                            fill
+                                            className="object-cover transition-transform duration-500 hover:scale-105"
+                                        />
                                     </div>
                                 )}
 
@@ -68,11 +67,7 @@ export default function Projects() {
                                     <Link href="#" className="text-sm font-semibold text-green-400 hover:text-green-300 transition-colors">
                                         View Source -&gt;
                                     </Link>
-                                    <Link href="#" className="text-sm font-semibold text-white hover:text-gray-300 transition-colors">
-                                        Live Demo -&gt;
-                                    </Link>
                                 </div>
-
                             </div>
                         </div>
                     ))}
@@ -85,10 +80,10 @@ export default function Projects() {
 // TEMPLATE DATA
 const projectData = [
     {
-        title: "Travel & Tours Platform",
+        title: "Explore Beyond",
         badge: "Full Stack",
         tags: ["React", "Firebase", "Firestore", "Tailwind"],
-        image: "/projects/travel.webp", // Replace with your image path
+        image: "/Explore-Beyond.png",
         description: (
             <>
                 <p>
@@ -104,10 +99,10 @@ const projectData = [
         ),
     },
     {
-        title: "E-Commerce System",
+        title: "Echo Chart",
         badge: "Backend Engineering",
         tags: ["Java", "SQL", "Spring Boot", "REST API"],
-        image: "/projects/ecommerce.webp",
+        image: "/Echo-Chart.png",
         description: (
             <>
                 <p>
@@ -123,10 +118,10 @@ const projectData = [
         ),
     },
     {
-        title: "Unity RPG Adventure",
+        title: "Zarvonia",
         badge: "Game Dev",
         tags: ["C#", "Unity 3D", "Physics Engine"],
-        image: "/projects/game.webp",
+        image: "/Zarvonia.png",
         description: (
             <>
                 <p>
@@ -140,23 +135,23 @@ const projectData = [
             </>
         ),
     },
-    {
-        title: "Project Title Placeholder",
-        badge: "Category",
-        tags: ["Tech A", "Tech B", "Tech C"],
-        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000",
-        description: (
-            <>
-                <p>
-                    This is a template for future projects. Describe the problem you solved here.
-                    Mention the specific challenges you faced and how your technical choices
-                    overcame them.
-                </p>
-                <p>
-                    Highlight the impact of the project (e.g., "Reduced load times by 40%" or
-                    "Used by 500+ students").
-                </p>
-            </>
-        ),
-    },
+    // {
+    //     title: "Project Title Placeholder",
+    //     badge: "Category",
+    //     tags: ["Tech A", "Tech B", "Tech C"],
+    //     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1000",
+    //     description: (
+    //         <>
+    //             <p>
+    //                 This is a template for future projects. Describe the problem you solved here.
+    //                 Mention the specific challenges you faced and how your technical choices
+    //                 overcame them.
+    //             </p>
+    //             <p>
+    //                 Highlight the impact of the project (e.g., "Reduced load times by 40%" or
+    //                 "Used by 500+ students").
+    //             </p>
+    //         </>
+    //     ),
+    // },
 ];
