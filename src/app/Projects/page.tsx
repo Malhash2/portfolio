@@ -11,7 +11,7 @@ export default function Projects() {
         <main className="min-h-screen bg-gray-950 text-white py-20">
             <div className="max-w-2xl mx-auto px-4 mb-8">
                 <h1 className="text-4xl font-bold mb-4">
-                    My <span className="text-green-400">Work</span>
+                    My <span className="text-cyan-400">Work</span>
                 </h1>
                 <p className="text-gray-400">
                     A collection of projects ranging from full-stack web apps to game development.
@@ -57,7 +57,7 @@ function ProjectCard({ item }) {
     return (
         <div className="mb-16">
             {/* Badge */}
-            <h2 className="bg-green-500/20 text-green-400 border border-green-500/30 rounded-full text-xs font-mono w-fit px-3 py-1 mb-4">
+            <h2 className="bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-full text-xs font-mono w-fit px-3 py-1 mb-4">
                 {item.badge}
             </h2>
 
@@ -99,7 +99,7 @@ function ProjectCard({ item }) {
                         <Link
                             href={item.link}
                             target="_blank"
-                            className="text-sm font-semibold text-green-400 hover:text-green-300 transition-colors"
+                            className="text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
                         >
                             View Source -&gt;
                         </Link>

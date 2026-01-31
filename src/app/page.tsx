@@ -26,11 +26,11 @@ export default function Home() {
 
                 {/* Name & Title */}
                 <div className="space-y-4">
-                    <h1 className="text-5xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                    <h1 className="text-5xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-cyan-100 to-cyan-600">
                         Mohammed Al-Hashimi
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-300 font-light tracking-wide">
-                        Software Developer <span className="text-green-400">•</span> Full Stack Developer
+                        Software Developer <span className="text-cyan-400">•</span> Full Stack Developer
                     </p>
                 </div>
 
@@ -43,14 +43,14 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row gap-4 mt-8">
                     <Link
                         href="/Projects"
-                        className="px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition duration-200"
+                        className="px-8 py-3 rounded-full border border-cyan-500/50 bg-cyan-950/30 text-cyan-400 font-semibold hover:bg-cyan-500/10 hover:border-cyan-400 hover:text-cyan-300 hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all duration-300"
                     >
                         View My Work
                     </Link>
 
                     <Link
                         href="/Contact"
-                        className="px-8 py-3 rounded-full border border-white/20 text-white font-semibold hover:bg-white/10 transition duration-200"
+                        className="px-8 py-3 rounded-full border border-white/10 text-gray-300 font-semibold hover:bg-cyan-500/10 hover:text-cyan-400 hover:border-cyan-500/50 transition duration-200"
                     >
                         Contact Me
                     </Link>

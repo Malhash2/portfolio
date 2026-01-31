@@ -46,7 +46,7 @@ export default function Navbar() {
             `}
         >
             <div className="max-w-5xl mx-auto text-white px-4 py-3 flex justify-between items-center">
-                <h1 className="text-xl font-bold text-green-400">Mohammed Al-Hashimi</h1>
+                <h1 className="text-xl font-bold text-cyan-400">Mohammed Al-Hashimi</h1>
                 <ul className="flex space-x-6 text-sm font-semibold">
                     <li><Link href={"/"}>Home</Link></li>
                     <li><Link href={"/About"}>About</Link></li>

@@ -34,7 +34,7 @@ export default function About() {
 
                     {/* Text Content */}
                     <div className="flex-1 space-y-6">
-                        <h2 className="text-2xl font-semibold text-green-400 tracking-wide uppercase">
+                        <h2 className="text-2xl font-semibold text-cyan-400 tracking-wide uppercase">
                             Who am I?
                         </h2>
                         <div className="text-gray-300 leading-relaxed text-lg space-y-4">
