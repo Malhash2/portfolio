@@ -61,7 +61,7 @@ const experienceData = [
 	{
 		title: "Community Software Contributor",
 		description:
-			"Collaborated with open-source teams to fix bugs and improve documentation. Gained experience in Git workflows and code reviews.",
+			"Maintained the Al-Mahdi Centre website and managed Breeze payment integrations for secure community donations and registrations.",
 		link: "https://github.com/yourusername",
 	},
 	// {
