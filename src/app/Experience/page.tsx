@@ -70,12 +70,12 @@ const experienceData = [
 	//         "Assisted in rebuilding the company landing page using React and Tailwind CSS. improved site performance scores by 20%.",
 	//     link: "#",
 	// },
-	{
-		title: "Freelance Web Developer",
-		description:
-			"Delivered custom web solutions for local small businesses. Managed full lifecycle from client requirements to deployment.",
-		link: "#",
-	},
+	// {
+	// 	title: "Freelance Web Developer",
+	// 	description:
+	// 		"Delivered custom web solutions for local small businesses. Managed full lifecycle from client requirements to deployment.",
+	// 	link: "#",
+	// },
 	{
 		title: "Hackathon Participant",
 		description:
